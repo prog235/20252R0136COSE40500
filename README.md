@@ -1,1 +1,2 @@
-# 20252R0136COSE40500
+# 252R SW Project
+Haegin, Escape Game
