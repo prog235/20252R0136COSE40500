@@ -34,5 +34,6 @@ public class CellphoneButton : MonoBehaviour
 
         // send digit to puzzle
         ownerPuzzle.OnDigitPressed(digit);
+        AudioManager.Instance.PlayPhoneTouch();
     }
 }
