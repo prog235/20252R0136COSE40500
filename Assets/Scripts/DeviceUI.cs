@@ -7,6 +7,7 @@ public class DeviceUI : MonoBehaviour
     public Transform initial;
     public Transform main;
     private Transform app;
+    private string deviceName;
 
     void Awake()
     {
@@ -19,6 +20,8 @@ public class DeviceUI : MonoBehaviour
             }
             initial.gameObject.SetActive(true);
         }
+
+        deviceName = this.gameObject.name;
     }
 
     public void Goto(Transform next)
@@ -29,6 +32,9 @@ public class DeviceUI : MonoBehaviour
             cur.gameObject.SetActive(false);
         }
         cur = next;
+
+        if(deviceName == "ComputerUI") AudioManager.Instance.PlayClick();
+        else AudioManager.Instance.PlayPhoneTouch();
     }
 
 
@@ -36,6 +42,9 @@ public class DeviceUI : MonoBehaviour
     {
         cur.gameObject.SetActive(false);
         cur = main;
+
+        if(deviceName == "ComputerUI") AudioManager.Instance.PlayClick();
+        else AudioManager.Instance.PlayPhoneTouch();
     }
 
 }
