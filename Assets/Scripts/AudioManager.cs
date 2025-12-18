@@ -24,6 +24,8 @@ public enum SfxId
     ClockButton,
     PC,
     Eraser,
+    Click,
+    PhoneTouch,
 }
 
 public class AudioManager : MonoBehaviour
@@ -145,5 +147,7 @@ public class AudioManager : MonoBehaviour
     public void PlayClockButton() => PlaySfx(SfxId.ClockButton);
     public void PlayPC() => PlaySfx(SfxId.PC);
     public void PlayEraser() => PlaySfx(SfxId.Eraser);
+    public void PlayClick() => PlaySfx(SfxId.Click);
+    public void PlayPhoneTouch() => PlaySfx(SfxId.PhoneTouch);
 }
 
